@@ -18,7 +18,7 @@
 
     <div class="row mt-3">
         <div class="col">
-            <a href="/admin/agenda/tambah" class="btn btn-primary">Tambah Agenda</a>
+            <a href="{{ url('/admin/agenda/tambah') }}" class="btn btn-primary">Tambah Agenda</a>
         </div>
     </div>
 
@@ -40,9 +40,9 @@
                         <td>{{ $a->judul }}</td>
                         <td>{{ $a->keterangan }}</td>
                         <td>
-                            <a href="/admin/agenda/ubah/{{ $a->id }}" class="badge bg-success">Edit</a>
-                            <a href="/admin/agenda/detail/{{ $a->id }}" class="badge bg-primary">Detail</a>
-                            <form action="/admin/agenda/hapus/{{ $a->id }}" class="d-inline" method="POST">
+                            <a href="{{ url('/admin/agenda/ubah/' . $a->id) }}" class="badge bg-success">Edit</a>
+                            <a href="{{ url('/admin/agenda/detail/' . $a->id) }}" class="badge bg-primary">Detail</a>
+                            <form action="{{ url('/admin/agenda/hapus/' . $a->id) }}" class="d-inline" method="POST">
                                 @csrf
                                 @method('delete')
                                 <button class="badge bg-danger" type="submit">Hapus</button>

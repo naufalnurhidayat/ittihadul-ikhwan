@@ -10,7 +10,7 @@
 </div>
 <div class="row mt-3">
     <div class="col-md-6">
-        <form action="/admin/laporan/ubah/{{ $laporan->id }}" method="POST">
+        <form action="{{ url('/admin/laporan/ubah/' . $laporan->id) }}" method="POST">
             @csrf
             @method('patch')
             <div class="mb-3">
@@ -30,7 +30,7 @@
                 <input type="text" class="form-control" id="jenis" name="jenis" value="{{ $laporan->jenis }}" required>
             </div>
             <button type="submit" class="btn btn-primary" name="submit">Ubah</button>
-            <a href="/admin/laporan" class="btn btn-warning">Kembali</a>
+            <a href="{{ url('/admin/laporan') }}" class="btn btn-warning">Kembali</a>
         </form>
     </div>
 </div>

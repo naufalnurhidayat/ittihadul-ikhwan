@@ -8,6 +8,6 @@
     <p class="lead">Halaman ini digunakan untuk admin website Masjid Ittihadul Ikhwan.</p>
     <hr class="my-4">
     <p>Silahkan isi kegiatan, laporan, dan yang lainnya.</p>
-    <a class="btn btn-primary btn-lg" href="/admin/laporan" role="button">Tambahkan Laporan</a>
+    <a class="btn btn-primary btn-lg" href="{{ url('/admin/laporan') }}" role="button">Tambahkan Laporan</a>
 </div>
 @endsection

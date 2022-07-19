@@ -21,8 +21,8 @@
                     {{ $kegiatan->keterangan }}
                 </li>
                 <li class="list-group-item text-center">
-                    <a href="/admin/agenda/ubah/{{ $kegiatan->id }}" class="btn btn-primary">Ubah Data Kegiatan</a>
-                    <a href="/admin/agenda" class="btn btn-success">Kembali</a>
+                    <a href="{{ url('/admin/agenda/ubah/' . $kegiatan->id) }}" class="btn btn-primary">Ubah Data Kegiatan</a>
+                    <a href="{{ url('/admin/agenda') }}" class="btn btn-success">Kembali</a>
                 </li>
             </ul>
         </div>

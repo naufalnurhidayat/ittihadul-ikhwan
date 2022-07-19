@@ -19,15 +19,15 @@
             <nav class="orange darken-4">
                 <div class="container">
                     <div class="nav-wrapper">
-                        <a href="/" class="brand-logo"><img src="{{ asset('img/utilities/logo.png') }}" alt="Masjid Ittihadul Ikhwan" width="50" class="d-inline-block align-text-top"></a>
+                        <a href="{{ url('/') }}" class="brand-logo"><img src="{{ asset('img/utilities/logo.png') }}" alt="Masjid Ittihadul Ikhwan" width="50" class="d-inline-block align-text-top"></a>
                         <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                         <ul class="right hide-on-med-and-down">
-                            <li><a href="/">Beranda</a></li>
+                            <li><a href="{{ url('/') }}">Beranda</a></li>
                             <li><a href="#about">Tentang</a></li>
                             <li><a href="#kegiatan">Agenda</a></li>
                             <li><a href="#laporan">Laporan</a></li>
                             <li><a href="#lainnya">Lainnya</a></li>
-                            <li><a href="/login">Login</a></li>
+                            <li><a href="{{ url('/login') }}">Login</a></li>
                         </ul>
                     </div>
                 </div>
@@ -35,12 +35,12 @@
         </div>
         
         <ul class="sidenav" id="mobile-nav">
-            <li><a href="/">Beranda</a></li>
+            <li><a href="{{ url('/') }}">Beranda</a></li>
             <li><a href="#tentang">Tentang</a></li>
             <li><a href="#agenda">Agenda</a></li>
             <li><a href="#laporan">Laporan</a></li>
             <li><a href="#lainnya">Lainnya</a></li>
-            <li><a href="/login">Login</a></li>
+            <li><a href="{{ url('/login') }}">Login</a></li>
         </ul>
         {{-- End Navbar --}}
 

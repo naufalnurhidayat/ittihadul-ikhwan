@@ -10,7 +10,7 @@
 </div>
 <div class="row mt-3">
     <div class="col-md-6">
-        <form action="/admin/laporan/tambah" method="POST">
+        <form action="{{ url('/admin/laporan/tambah') }}" method="POST">
             @csrf
             <div class="mb-3">
                 <label for="pemasukan" class="form-label">Pemasukan</label>
@@ -29,7 +29,7 @@
                 <input type="text" class="form-control" id="jenis" name="jenis" required>
             </div>
             <button type="submit" class="btn btn-primary" name="submit">Tambah</button>
-            <a href="/admin/laporan" class="btn btn-warning">Kembali</a>
+            <a href="{{ url('/admin/laporan') }}" class="btn btn-warning">Kembali</a>
         </form>
     </div>
 </div>

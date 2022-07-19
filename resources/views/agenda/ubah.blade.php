@@ -10,7 +10,7 @@
 </div>
 <div class="row mt-3">
     <div class="col-md-6">
-        <form action="/admin/agenda/ubah/{{ $kegiatan->id }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ url('/admin/agenda/ubah/' . $kegiatan->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('patch')
             <div class="mb-3">
@@ -34,7 +34,7 @@
                 </div>
             </div>
             <button type="submit" class="btn btn-primary" name="submit">Ubah</button>
-            <a href="/admin/agenda" class="btn btn-warning">Kembali</a>
+            <a href="{{ url('/admin/agenda') }}" class="btn btn-warning">Kembali</a>
         </form>
     </div>
 </div>

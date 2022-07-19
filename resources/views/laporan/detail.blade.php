@@ -26,8 +26,8 @@
                     <h6>Tanggal: </h6>{{ $laporan->tanggal }}
                 </li>
                 <li class="list-group-item text-center">
-                    <a href="/admin/laporan/ubah/{{ $laporan->id }}" class="btn btn-primary">Ubah Data Laporan</a>
-                    <a href="/admin/laporan" class="btn btn-success">Kembali</a>
+                    <a href="{{ url('/admin/laporan/ubah/' . $laporan->id) }}" class="btn btn-primary">Ubah Data Laporan</a>
+                    <a href="{{ url('/admin/laporan') }}" class="btn btn-success">Kembali</a>
                 </li>
             </ul>
         </div>

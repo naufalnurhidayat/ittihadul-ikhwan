@@ -18,7 +18,7 @@
 
     <div class="row mt-3">
         <div class="col">
-            <a href="/admin/laporan/tambah" class="btn btn-primary">Tambah Laporan</a>
+            <a href="{{ url('/admin/laporan/tambah') }}" class="btn btn-primary">Tambah Laporan</a>
         </div>
     </div>
 
@@ -42,9 +42,9 @@
                         <td>{{ $l->jenis }}</td>
                         <td>{{ $l->tanggal }}</td>
                         <td>
-                            <a href="/admin/laporan/ubah/{{ $l->id }}" class="badge bg-success">Edit</a>
-                            <a href="/admin/laporan/detail/{{ $l->id }}" class="badge bg-primary">Detail</a>
-                            <form action="/admin/laporan/hapus/{{ $l->id }}" class="d-inline" method="POST">
+                            <a href="{{ url('/admin/laporan/ubah/' . $l->id) }}" class="badge bg-success">Edit</a>
+                            <a href="{{ url('/admin/laporan/detail/' . $l->id) }}" class="badge bg-primary">Detail</a>
+                            <form action="{{ url('/admin/laporan/hapus/' . $l->id) }}" class="d-inline" method="POST">
                                 @csrf
                                 @method('delete')
                                 <button class="badge bg-danger" type="submit">Hapus</button>

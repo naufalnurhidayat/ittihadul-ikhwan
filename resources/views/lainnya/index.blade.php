@@ -18,7 +18,7 @@
 
     <div class="row mt-3">
         <div class="col">
-            <a href="/admin/lainnya/tambah" class="btn btn-primary">Tambah Lainnya</a>
+            <a href="{{ url('/admin/lainnya/tambah') }}" class="btn btn-primary">Tambah Lainnya</a>
         </div>
     </div>
 
@@ -40,9 +40,9 @@
                         <td>{{ $utility->judul }}</td>
                         <td>{{ $utility->keterangan }}</td>
                         <td>
-                            <a href="/admin/lainnya/ubah/{{ $utility->id }}" class="badge bg-success">Edit</a>
-                            <a href="/admin/lainnya/detail/{{ $utility->id }}" class="badge bg-primary">Detail</a>
-                            <form action="/admin/lainnya/hapus/{{ $utility->id }}" class="d-inline" method="POST">
+                            <a href="{{ url('/admin/lainnya/ubah/' . $utility->id) }}" class="badge bg-success">Edit</a>
+                            <a href="{{ url('/admin/lainnya/detail/' . $utility->id) }}" class="badge bg-primary">Detail</a>
+                            <form action="{{ url('/admin/lainnya/hapus/' . $utility->id) }}" class="d-inline" method="POST">
                                 @csrf
                                 @method('delete')
                                 <button class="badge bg-danger" type="submit">Hapus</button>

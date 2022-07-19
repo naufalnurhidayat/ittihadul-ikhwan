@@ -19,7 +19,7 @@
 
 <div class="row mt-3">
     <div class="col">
-        <a href="/admin/registrasi" class="btn btn-primary">Tambah Admin</a>
+        <a href="{{ url('/admin/registrasi') }}" class="btn btn-primary">Tambah Admin</a>
     </div>
 </div>
 
@@ -40,8 +40,8 @@
                     <h6>Role: </h6>{{ auth()->user()->role }}
                 </li>
                 <li class="list-group-item text-center">
-                    <a href="/admin/akun/ubah" class="btn btn-primary">Ubah Data Akun</a>
-                    <a href="/admin" class="btn btn-success">Kembali</a>
+                    <a href="{{ url('/admin/akun/ubah') }}" class="btn btn-primary">Ubah Data Akun</a>
+                    <a href="{{ url('/admin') }}" class="btn btn-success">Kembali</a>
                 </li>
             </ul>
         </div>

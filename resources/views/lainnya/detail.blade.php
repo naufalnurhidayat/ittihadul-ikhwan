@@ -21,8 +21,8 @@
                     {{ $utility->keterangan }}
                 </li>
                 <li class="list-group-item text-center">
-                    <a href="/admin/lainnya/ubah/{{ $utility->id }}" class="btn btn-primary">Ubah Data Lainnya</a>
-                    <a href="/admin/lainnya" class="btn btn-success">Kembali</a>
+                    <a href="{{ url('/admin/lainnya/ubah/' . $utility->id) }}" class="btn btn-primary">Ubah Data Lainnya</a>
+                    <a href="{{ url('/admin/lainnya') }}" class="btn btn-success">Kembali</a>
                 </li>
             </ul>
         </div>

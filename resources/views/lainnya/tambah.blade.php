@@ -10,7 +10,7 @@
 </div>
 <div class="row mt-3">
     <div class="col-md-6">
-        <form action="/admin/lainnya/tambah" method="POST" enctype="multipart/form-data">
+        <form action="{{ url('/admin/lainnya/tambah') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">
                 <label for="judul" class="form-label">Judul</label>
@@ -25,7 +25,7 @@
                 <input type="file" class="form-control" id="foto" name="foto" required>
             </div>
             <button type="submit" class="btn btn-primary" name="submit">Tambah</button>
-            <a href="/admin/lainnya" class="btn btn-warning">Kembali</a>
+            <a href="{{ url('/admin/lainnya') }}" class="btn btn-warning">Kembali</a>
         </form>
     </div>
 </div>
